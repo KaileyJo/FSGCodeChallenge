@@ -1,0 +1,141 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 text-center">
+        <h1>World Bank China</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-10 col col-md-offset-1">
+        <table st-table="indicators" st-safe-src="worldBankData.list" class="table table-striped">
+            <thead>
+                <tr>
+                    <th colspan="5"><input st-search="indicatorname" class="form-control"
+                                           placeholder="Search Indicators..." type="text"/></th>
+                    <th colspan="5"><input st-search="indicatorcode" class="form-control"
+                                           placeholder="Search Codes..." type="text"/></th>
+                </tr>
+                <tr>
+                    <th st-sort="indicatorname">Indicator Name</th>
+                    <th st-sort="indicatorcode">Indicator Code</th>
+                    <th>1960</th>
+                    <th>1961</th>
+                    <th>1962</th>
+                    <th>1963</th>
+                    <th>1964</th>
+                    <th>1965</th>
+                    <th>1966</th>
+                    <th>1967</th>
+                    <th>1968</th>
+                    <th>1969</th>
+                    <th>1970</th>
+                    <th>1971</th>
+                    <th>1972</th>
+                    <th>1973</th>
+                    <th>1974</th>
+                    <th>1975</th>
+                    <th>1976</th>
+                    <th>1977</th>
+                    <th>1978</th>
+                    <th>1979</th>
+                    <th>1980</th>
+                    <th>1981</th>
+                    <th>1982</th>
+                    <th>1983</th>
+                    <th>1984</th>
+                    <th>1985</th>
+                    <th>1986</th>
+                    <th>1987</th>
+                    <th>1988</th>
+                    <th>1989</th>
+                    <th>1990</th>
+                    <th>1991</th>
+                    <th>1992</th>
+                    <th>1993</th>
+                    <th>1994</th>
+                    <th>1995</th>
+                    <th>1996</th>
+                    <th>1997</th>
+                    <th>1998</th>
+                    <th>1999</th>
+                    <th>2000</th>
+                    <th>2001</th>
+                    <th>2002</th>
+                    <th>2003</th>
+                    <th>2004</th>
+                    <th>2005</th>
+                    <th>2006</th>
+                    <th>2007</th>
+                    <th>2008</th>
+                    <th>2009</th>
+                    <th>2010</th>
+                    <th>2011</th>
+                    <th>2012</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="indicator in indicators">
+                    <td>{{indicator.indicatorname}}</td>
+                    <td>{{indicator.indicatorcode}}</td>
+                    <td>{{indicator[1960]}}</td>
+                    <td>{{indicator[1961]}}</td>
+                    <td>{{indicator[1962]}}</td>
+                    <td>{{indicator[1963]}}</td>
+                    <td>{{indicator[1964]}}</td>
+                    <td>{{indicator[1965]}}</td>
+                    <td>{{indicator[1966]}}</td>
+                    <td>{{indicator[1967]}}</td>
+                    <td>{{indicator[1968]}}</td>
+                    <td>{{indicator[1969]}}</td>
+                    <td>{{indicator[1970]}}</td>
+                    <td>{{indicator[1971]}}</td>
+                    <td>{{indicator[1972]}}</td>
+                    <td>{{indicator[1973]}}</td>
+                    <td>{{indicator[1974]}}</td>
+                    <td>{{indicator[1975]}}</td>
+                    <td>{{indicator[1976]}}</td>
+                    <td>{{indicator[1977]}}</td>
+                    <td>{{indicator[1978]}}</td>
+                    <td>{{indicator[1979]}}</td>
+                    <td>{{indicator[1980]}}</td>
+                    <td>{{indicator[1981]}}</td>
+                    <td>{{indicator[1982]}}</td>
+                    <td>{{indicator[1983]}}</td>
+                    <td>{{indicator[1984]}}</td>
+                    <td>{{indicator[1985]}}</td>
+                    <td>{{indicator[1986]}}</td>
+                    <td>{{indicator[1987]}}</td>
+                    <td>{{indicator[1988]}}</td>
+                    <td>{{indicator[1989]}}</td>
+                    <td>{{indicator[1990]}}</td>
+                    <td>{{indicator[1991]}}</td>
+                    <td>{{indicator[1992]}}</td>
+                    <td>{{indicator[1993]}}</td>
+                    <td>{{indicator[1994]}}</td>
+                    <td>{{indicator[1995]}}</td>
+                    <td>{{indicator[1996]}}</td>
+                    <td>{{indicator[1997]}}</td>
+                    <td>{{indicator[1998]}}</td>
+                    <td>{{indicator[1999]}}</td>
+                    <td>{{indicator[2000]}}</td>
+                    <td>{{indicator[2001]}}</td>
+                    <td>{{indicator[2002]}}</td>
+                    <td>{{indicator[2003]}}</td>
+                    <td>{{indicator[2004]}}</td>
+                    <td>{{indicator[2005]}}</td>
+                    <td>{{indicator[2006]}}</td>
+                    <td>{{indicator[2007]}}</td>
+                    <td>{{indicator[2008]}}</td>
+                    <td>{{indicator[2009]}}</td>
+                    <td>{{indicator[2010]}}</td>
+                    <td>{{indicator[2011]}}</td>
+                    <td>{{indicator[2012]}}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="text-center" st-pagination="" st-items-by-page="100" colspan="12" st-displayed-pages="10">
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
