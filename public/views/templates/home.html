@@ -1,22 +1,27 @@
 <div class="row">
-    <div class="col-md-6 col-md-offset-3 text-center">
-        <h1>World Bank China</h1>
+    <div class="col-md-4 col col-md-offset-4">
+        <select class="form-control"
+                ng-model="selectedTopic"
+                ng-change="getDataByTopicCode()"
+                ng-options="topic.description for topic in worldBankTopics.list">
+            <option value="">Refine results by indicator topic...</option>
+        </select>
     </div>
 </div>
 
 <div class="row">
-    <div class="col-md-10 col col-md-offset-1">
-        <table st-table="indicators" st-safe-src="worldBankData.list" class="table table-striped">
+    <div class="col-md-10 col col-md-offset-1 worldBankTable">
+        <table st-table="indicators" st-safe-src="worldBankData.list" class="table table-striped table-responsive">
             <thead>
                 <tr>
-                    <th colspan="5"><input st-search="indicatorname" class="form-control"
+                    <th colspan="4"><input st-search="indicator_name" class="form-control"
                                            placeholder="Search Indicators..." type="text"/></th>
-                    <th colspan="5"><input st-search="indicatorcode" class="form-control"
+                    <th colspan="4"><input st-search="indicator_code" class="form-control"
                                            placeholder="Search Codes..." type="text"/></th>
                 </tr>
-                <tr>
-                    <th st-sort="indicatorname">Indicator Name</th>
-                    <th st-sort="indicatorcode">Indicator Code</th>
+                <tr class="columnHeaders">
+                    <th st-sort="indicator_name"><div class="indicatorColumn">Indicator Name</div></th>
+                    <th st-sort="indicator_code">Indicator Code</th>
                     <th>1960</th>
                     <th>1961</th>
                     <th>1962</th>
@@ -74,8 +79,8 @@
             </thead>
             <tbody>
                 <tr ng-repeat="indicator in indicators">
-                    <td>{{indicator.indicatorname}}</td>
-                    <td>{{indicator.indicatorcode}}</td>
+                    <td><div class="indicatorColumn">{{indicator.indicator_name}}</div></td>
+                    <td>{{indicator.indicator_code}}</td>
                     <td>{{indicator[1960]}}</td>
                     <td>{{indicator[1961]}}</td>
                     <td>{{indicator[1962]}}</td>

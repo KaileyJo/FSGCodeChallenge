@@ -1,0 +1,35 @@
+body {
+    background: url("/img/World-map.jpg") left top no-repeat fixed;
+}
+
+table {
+    margin-top: 10px;
+}
+
+td, .columnHeaders {
+    border: 1px solid lightgray;
+}
+
+.row{
+    padding-bottom: 10px;
+}
+
+.jumbotron {
+    border-radius: 15px;
+}
+
+.worldBankTable {
+    overflow-x: auto;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.indicatorColumn {
+    width: 300px;
+}
+
+.logo {
+    height: 150px;
+    width: auto;
+    margin: 20px;
+}
