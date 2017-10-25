@@ -13,6 +13,7 @@ if(process.env.DATABASE_URL !== undefined) {
     connectionString = 'postgres://localhost:5432/worldbank';
 }
 
+//Request all World Bank data from DB
 router.get('/', function(req, res) {
     var results = [];
 
@@ -34,6 +35,7 @@ router.get('/', function(req, res) {
     });
 });
 
+//Request World Bank indicator topics from DB
 router.get('/topics', function(req, res) {
     var results = [];
 
@@ -55,6 +57,8 @@ router.get('/topics', function(req, res) {
     });
 });
 
+//Request only World Bank indicators in the selected topic category from DB
+//Find selected topic by matching the topic code to the first two characters of the indicator code
 router.get('/topicCode/:topic_code', function(req, res) {
     var results = [];
 
